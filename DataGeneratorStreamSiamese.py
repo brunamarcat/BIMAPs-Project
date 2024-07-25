@@ -37,24 +37,25 @@ class DataGeneratorStreamSiamese(DataGeneratorStream):
             
             # TO DO: assegurar que la imatge es diferent
             negative_image, negative_dendrite, negative_spines = self.getSample()
-            
-            # Augmenting the data
+#            negative_image, negative_dendrite, negative_spines = copy.deepcopy(anchor_image), copy.deepcopy(anchor_dendrite), copy.deepcopy(anchor_spines)  
+
+
             if self.augment:
                 augmented = self.aug(image=anchor_image.astype(np.uint8), 
                     mask1=anchor_dendrite.astype(np.uint8), 
                     mask2=anchor_spines.astype(np.uint8)) #augment anchor
                 
-                anchor_image = augmented['image']
-                anchor_dendrite = augmented['mask1']
-                anchor_spines = augmented['mask2']
+                # anchor_image = augmented['image']
+                # anchor_dendrite = augmented['mask1']
+                # anchor_spines = augmented['mask2']
                 
-                augmented = self.aug(image=positive_image.astype(np.uint8), 
-                    mask1=positive_dendrite.astype(np.uint8), 
-                    mask2=positive_spines.astype(np.uint8)) #augment positive
-                
-                positive_image = augmented['image']
-                positive_dendrite = augmented['mask1']
-                positive_spines = augmented['mask2']
+                # augmented = self.aug(image=positive_image.astype(np.uint8), 
+                #     mask1=positive_dendrite.astype(np.uint8), 
+                #     mask2=positive_spines.astype(np.uint8)) #augment positive
+            
+                # positive_image = augmented['image']
+                # positive_dendrite = augmented['mask1']
+                # positive_spines = augmented['mask2']
                 
                 augmented = self.aug(image=negative_image.astype(np.uint8), 
                     mask1=negative_dendrite.astype(np.uint8), 
