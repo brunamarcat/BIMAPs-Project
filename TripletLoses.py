@@ -15,7 +15,7 @@ class Triplet_loss_function_dendrite(Loss):
         y_t_reshaped = tf.reshape(y_true, (-1, 3, 128, 128, 1))
         original_loss = sm.losses.dice_loss(y_t_reshaped[:,0,:,:,:], y_p_reshaped[:,0,:,:,:])
         mask = tf.not_equal(tf.squeeze(y_t_reshaped[:,0,:,:]),tf.squeeze(y_t_reshaped[:,2,:,:]))
-        Aux = MSE(y_p_reshaped[:,0,:,:], y_p_reshaped[:,2,:,:])
+        Aux = sm.losses.dice_loss(y_p_reshaped[:,0,:,:], y_p_reshaped[:,2,:,:])
         Aux =tf.where(mask, Aux, tf.zeros_like(Aux))
         triplet_loss=tf.math.maximum(tf.convert_to_tensor(0,dtype='float32'), 
                     tf.reduce_mean(MSE(y_p_reshaped[:,0,:,:], y_p_reshaped[:,1,:,:])) -
