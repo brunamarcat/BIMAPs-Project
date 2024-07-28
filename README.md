@@ -84,7 +84,6 @@ python 'Training DeepD3 model.py'  \
 
 ## Results
 
-Here the results obtained training the model using 5000 examples (10% of the data)  using the original dice loss and mean squared error in contrast to training it with 5000 examples using the triplet loss method are shown. The parameters used are the ones written in the example above.![exp 501 dendri](C:\Users\bruna\OneDrive\Escriptori\Bioimaging\Codi\exp 501 dendri.jpg)
-
-![](C:\Users\bruna\OneDrive\Escriptori\Bioimaging\Codi\501 exp results.jpg)
-
+Here the results obtained training the model using 5000 examples (10% of the data)  using the original dice loss and mean squared error in contrast to training it with 5000 examples using the triplet loss method are shown. The parameters used are the ones written in the example above.
+![Sample results  spines](https://github.com/user-attachments/assets/8e94964d-ffb8-43db-80ba-56e76cc43472)
+![Sample results dendrites](https://github.com/user-attachments/assets/90a04882-cf86-4ee0-aab2-cd5905799619)
