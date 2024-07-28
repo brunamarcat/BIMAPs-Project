@@ -1,0 +1,11 @@
+albumentations==1.4.10
+deepd3==0.1
+flammkuchen==1.0.3
+matplotlib==3.7.1
+numpy==2.0.1
+opencv_python==4.8.1.78
+opencv_python_headless==4.10.0.84
+pandas==2.2.2
+segmentation_models==1.0.1
+tensorflow==2.17.0
+tensorflow_intel==2.17.0
