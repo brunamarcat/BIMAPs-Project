@@ -7,8 +7,7 @@ import argparse
 import segmentation_models as sm
 from deepd3.model import DeepD3_Model
 from deepd3.training.stream import DataGeneratorStream
-from DataGeneratorStreamSiamese import DataGeneratorStreamSiamese
-from TripletLoses2 import Triplet_loss_function_dendrite, Triplet_loss_function_spine
+from TripletLoses import Triplet_loss_function_dendrite, Triplet_loss_function_spine
 from tensorflow.keras.losses import MeanSquaredError
 from tensorflow.keras.optimizers import Adam
 from tensorflow.keras.callbacks import ModelCheckpoint, CSVLogger, LearningRateScheduler
@@ -197,7 +196,7 @@ def main():
             Y2_validation = np.array(Y2_validation)   
 
             # Convert data into triplets
-            X_training, Y1_training, Y2_training = Generate_triplets(X_training, Y1_training, Y2_training, ntripletsperimage=ntripletsperimage)
+            X_validation, Y1_validation, Y2_validation = Generate_triplets(X_validation, Y1_validation, Y2_validation, ntripletsperimage=1)
 
 
         ###########  2. Create the DeepD3 model  ###########
