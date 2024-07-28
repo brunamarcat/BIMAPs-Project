@@ -3,7 +3,11 @@
 This project uses DeepD3, which can be found in:
 
 - DeepD3 [repository](https://github.com/ankilab/DeepD3/tree/main)
-- DeepD3 [website ](https://deepd3.forschung.fau.de/)
+- DeepD3 [website ](https://deepd3.forschung.fau.de/)  
+  
+The data used for these experiments can be found here:  
+- [training ](https://zenodo.org/records/8428849/files/DeepD3_Training.d3set?download=1)
+- [validation](https://zenodo.org/records/8428849/files/DeepD3_Validation.d3set?download=1)
 
 Project developed by **Bruna Martin i Català**
 
